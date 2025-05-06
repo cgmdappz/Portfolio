@@ -8,7 +8,7 @@
     <title>Mon portfolio - Nassim AOULAD SAID</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="icon" type="image/png" href="images/N.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -21,16 +21,19 @@
 
         <nav class="navbar">
             <a href="#home" class="active">Accueil</a>
-            <a href="#about">A propos</a>
+            <a href="#about">À propos</a>
             <a href="#education">Parcours</a>
+            
             <a href="#skills">Compétences</a>
-			<a href="#projets">Projets</a>
+            <div class="dropdown">
+                <a href="#projets" class="dropdown-toggle">Projets</a>
+                <div class="dropdown-menu">
+                    <a href="#projets" onclick="switchProjet('univ')">Projets Universitaires</a>
+                    <a href="#projets" onclick="switchProjet('pro')">Projets Professionnels</a>
+                </div>
+            </div>
+            <a href="#bilan">Bilan</a>
             <a href="#contact">Contact</a>
-
-
-
-            <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
         </nav>
     </header>
 
@@ -78,7 +81,7 @@
             <p>Je m'appelle Nassim AOULAD SAID. Je suis titulaire d'un BAC Général avec les spécialités Maths et NSI (Numérique et Sciences Informatiques). 
 			Je suis actuellement étudiant en deuxième année de Bachelor Universitaire de Technologie en Sciences des Données et en stage au sein de la SMACL.
 			J'éprouve une attirance particulière pour le monde de l'audiovisuel et de la technologie : je suis passionné par la musique et les jeux vidéo.
-			Au quotidien, je suis quelqu'un de serviable envers mes pairs, je suis sérieux quelles que soient les tâches qui me sont confiées, et je fais preuve d'autonomie au quotidien.
+			Au quotidien, je suis quelqu'un de serviable envers mes pairs, je suis sérieux quelles que soient les tâches qui me sont confiées, et j'ai un sens de l'humour aiguisé.
                 <span class="animate scroll" style="--i:4;"></span>
             </p>
 
@@ -103,7 +106,7 @@
                         <div class="content">
                             <div class="year"><i class='bx bxs-calendar'></i> 2023</div>
                             <h3>Baccalauréat général - Lycée Paul Guérin</h3>
-                            <p>J'ai obtenu un baccalauréat général, avec les spécialités Maths et NSI. 
+                            <p>J'ai obtenu un baccalauréat général, sans mention, avec les spécialités Maths et NSI. 
 							Je n'avais pas initialement choisi NSI comme spécialité, mais en première, je me suis rendu compte que je n'aimais pas la physique-chimie. C'est pour cette raison que j'ai changé de filière en cours d'année.</p>
                         </div>
                     </div>
@@ -146,7 +149,7 @@
                         <div class="content">
                             <div class="year"><i class='bx bxs-calendar'></i> 2025</div>
                             <h3>Stage à la SMACL - Niort</h3>
-                            <p>Actuellement en stage à la SMACL depuis le 07 avril, j’intègre progressivement une équipe projet dynamique. Pour l’instant, mes missions consistent principalement à observer et comprendre les processus en place. Je commence à participer à la récolte des besoins utilisateurs avec le Product Owner (PO), ce qui m’aide à mieux saisir les enjeux métiers. J’échange également avec le Business Analyst (BA) afin de découvrir comment sont conceptualisés et spécifiés ces besoins en tenant compte des impacts sur le système existant. Ce début de stage me permet de me familiariser avec la gestion de projet et de mieux comprendre le fonctionnement d’un système d’information dans le domaine de l’assurance.</p>
+                            <p>Actuellement en stage à la SMACL depuis le 07/04, j’intègre progressivement une équipe projet dynamique. Pour l’instant, mes missions consistent principalement à observer et comprendre les processus en place. Je commence à participer à la récolte des besoins utilisateurs avec le Product Owner (PO), ce qui m’aide à mieux saisir les enjeux métiers. J’échange également avec le Business Analyst (BA) afin de découvrir comment sont conceptualisés et spécifiés ces besoins en tenant compte des impacts sur le système existant. Ce début de stage me permet de me familiariser avec la gestion de projet et de mieux comprendre le fonctionnement d’un système d’information dans le domaine de l’assurance.</p>
                         </div>
                     </div>
                     
@@ -156,6 +159,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- skills section design -->
     <section class="skills" id="skills">
@@ -172,8 +176,8 @@
                             <div class="bar"><span></span></div>
                         </div>
 
-                        <div class="progress">
-                            <h3>CSS <span>70%</span></h3>
+						<div class="progress">
+                            <h3>SQL <span>85%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
 
@@ -209,7 +213,7 @@
             </div>
 
             <div class="skills-column">
-                <h3 class="title">Compétences professionnelles <span class="animate scroll" style="--i:5;"></span></h3>
+                <h3 class="title">Compétences au sein d'une équipe <span class="animate scroll" style="--i:5;"></span></h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
@@ -224,12 +228,27 @@
                         </div>
 
                         <div class="progress">
+                            <h3>Discipline <span>100%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
                             <h3>Prise d'initiative <span>85%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
 
                         <div class="progress">
-                            <h3>Autonomie <span>100%</span></h3>
+                            <h3>Autonomie <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>A l'écoute <span>100%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Dynamique <span>100%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                     </div>
@@ -245,17 +264,10 @@
     <section class="education" id="projets">
         <h2 class="heading">Mes <span>Projets</span> au <span>sein</span> de <span>mon</span> BUT<span class="animate scroll" style="--i:1;"></span></h2>
         <h3 class="heading">*Situation d'Apprentissage et d'Évaluation<span class="animate scroll" style="--i:1;"></span></h3>
-    
-        <!-- Onglets pour les années -->
-        <div class="btn-box .btn">
-            <button class="btn" onclick="openTab(event, 'annee1')">1ère Année</button>
-            <span class="animate scroll" style="--i:5;"></span>
-            <button class="btn" onclick="openTab(event, 'annee2')">2ème Année</button>
-            <span class="animate scroll" style="--i:5;"></span>
-        </div>
+
 
         <!-- Contenu de la 1ère année -->
-        <div id="annee1" class="tab-content active">
+        <div id="projets-univ" class="projets-content">  
             <div class="education-row">
                 <div class="education-column">
                     <div class="education-box">
@@ -351,10 +363,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     
         <!-- Contenu de la 2ème année -->
-        <div id="annee2" class="tab-content">
+        
             <div class="education-row">
                 <div class="education-column">
                     <div class="education-box">
@@ -419,7 +431,7 @@
                                 <a href="https://nassimaouladsaid.shinyapps.io/sae_dataviz/" target="_blank">Voir l'application</a></p>
                             </div>
                         </div>
-             
+            
                         <div class="education-content">
                             <div class="content">
                                 <div class="year"><i class='bx bxs-calendar'></i> juin 2024 - 2026 </div>
@@ -435,8 +447,76 @@
                 </div>
             </div>
         </div>
+        
+
+        <!-- Projets Professionnels -->
+        <div id="projets-pro" class="projets-content" >
+            <div class="education-row">
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <h3 class="title">SMACL<span class="animate scroll" style="--i:2;"></span></h3>
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>avril 2025</div>
+                                <h3>Intégration de champs dans des tables</h3>
+                                <p>Dans le cadre de mon stage à la SMACL, j’ai travaillé sur l’intégration et la vérification de données dans les bases SQL utilisées par l’entreprise. 
+                                    Un enjeu principal consistait à différencier clairement les entités gestionnaires selon l’assureur (la SMACL ou la MAIF), notamment via les champs 
+                                    <code>ENTITE_GESTION</code> et <code>ASSUREUR</code>. Ces champs permettent de s’assurer que chaque dossier est bien rattaché à l’entité adéquate selon le contrat et l’assureur. 
+                                    Ce besoin est apparu suite au rapprochement entre la SMACL et la MAIF, nécessitant une distinction dans les bases de données pour garantir la fiabilité des traitements métier. 
+                                    J’ai également optimisé les requêtes de jointure entre certaines tables afin de rendre les vérifications plus efficaces.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>mai 2025</div>
+                                <h3>Copie de DWH</h3>
+                                <p>Dans le cadre de mon stage à la SMACL, j’ai travaillé sur la création d’une copie d’une partie du Data Warehouse de la SMACL vers la MAIF.
+                                    Cette copie consistait à transférer certaines données en appliquant un filtre pour ne garder que les informations liées à la MAIF.
+                                    L’objectif était de permettre aux équipes de la MAIF d’accéder uniquement aux données qui les concernent, tout en respectant les règles de confidentialité.
+                                </p>
+                            </div>
+                        </div>
+                        <span class="animate scroll" style="--i:3;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-	
+    
+
+    <!-- bilan section  -->
+    <section class="bilan" id="bilan">
+        <h2 class="heading">Mon <span>Bilan</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <div class="bilan-content">           
+            <div class="bilan-box"> 
+                <h3>Bilan</h3>
+                <p>Au cours de ces 2 années de BUT et de mon stage au sein de la SMACL, j'ai acquis des compétences variées en sciences des données, en programmation, et gestion de projets. Mes expériences m'ont permis de développer une vision analytique des projets, que je n'avais pas auparavant</p>
+            </div>
+            <div class="bilan-box">
+                <h3>Points forts</h3>
+                <ul>
+                    <li>Solides compétences en langage de programmation comme Python, SQL, R ou SAS par exemple.</li>
+                    <li>Expérience en analyse de données et visualisation (Power BI, R Shiny).</li>
+                    <li>Adaptabilité et curiosité pour les nouvelles technologies.</li>
+                </ul>
+            </div>
+            <div class="bilan-box">
+                <h3>Points faibles</h3>
+                <ul>
+                    <li class="weakness">Manque d'implication dans certaines matières, notamment en statistiques.</li>
+                    <li class="weakness">Tendance à travailler seul, ce qui peut limiter les échanges d'idées en équipe.</li>
+                    <li class="weakness">Difficulté à demander de l'aide lorsque je rencontre un problème.</li>
+                </ul>
+            </div>
+            <div class="bilan-box">
+                <h3>Objectifs </h3>
+                <p>Je souhaite continuer à développer mes compétences en data science, en m'investissant davantage dans les domaines où je rencontre des difficultés. J'espère décrocher une alternance pour mon BUT 3 afin de mettre mes qualités au service d’un environnement professionnel.</p>
+            </div>
+        </div>
+    </section>
+
 
     <!-- contact section design -->
     <section class="contact" id="contact">
@@ -488,7 +568,7 @@
     <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2024 by Nassim AOULAD SAID | Tous Droits Réservés.</p>
+            <p>Copyright &copy; 2025 by Nassim AOULAD SAID | Tous Droits Réservés.</p>
 
             <span class="animate scroll" style="--i:1;"></span>
         </div>
