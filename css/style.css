@@ -54,7 +54,10 @@ body {
 }
 
 .navbar {
-    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    align-items: center; 
 }
 
 .navbar a {
@@ -79,6 +82,58 @@ a:hover {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
+}
+
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 70%; 
+    transform: translateX(-50%); 
+    background-color: #081b29; 
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    width: 250px; /* Définit une largeur fixe pour le sous-menu */
+    text-align: left; 
+}
+
+/* .navbar .dropdown .dropdown-menu a {
+    display: block; 
+    padding: 15px 20px;
+    color: white; 
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.navbar .dropdown .dropdown-menu a:hover {
+    background-color: #112e42;
+}
+*/
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #menu-icon {
@@ -452,6 +507,95 @@ span {
     padding-top: .5rem;
 }
 
+
+.bilan {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    background: var(--second-bg-color); 
+    padding: 10rem 9% 5rem; 
+    min-height: 100vh; 
+    text-align: center;
+}
+
+.bilan .heading {
+    display: block; 
+    font-size: 5rem; 
+    margin-bottom: 3rem; 
+    color: var(--text-color); 
+}
+
+.bilan-content {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 3rem; 
+    justify-content: center; 
+}
+
+.bilan-box {
+    background: var(--bg-color); 
+    border: .2rem solid var(--main-color); 
+    border-radius: .8rem; 
+    padding: 2rem; 
+    width: 27rem; 
+    text-align: left; 
+    color: var(--text-color); 
+    transition: .5s ; 
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bilan-box:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.bilan-box h3 {
+    font-size: 2.4rem; 
+    margin-bottom: 1.5rem; 
+    color: var(--main-color); 
+}
+
+.bilan-box p {
+    font-size: 1.6rem; 
+    line-height: 1.8; 
+}
+
+.bilan-box ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.bilan-box ul li {
+    font-size: 1.6rem; 
+    margin-bottom: 1rem; 
+    position: relative; 
+    padding-left: 2rem; 
+}
+
+.bilan-box ul li::before {
+    content: "✔"; 
+    position: absolute; 
+    left: 0;
+    color: var(--main-color); 
+    font-size: 1.6rem; 
+}
+
+.bilan-box ul li.weakness::before {
+    content: "✖"; 
+    position: absolute;
+    left: 0;
+    color: #ff4d4d; 
+    font-size: 1.6rem;
+}
+
 .skills {
     min-height: auto;
     padding-bottom: 15rem;
@@ -544,7 +688,7 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 75%;
+    width: 85%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
@@ -576,17 +720,30 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 85%;
+    width: 100%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 85%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
+    width: 90%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
     width: 100%;
 }
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
+    width: 100%;
+}
+
 
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--second-bg-color);
+    background: var(--first-bg-color);
 }
 
 .contact h2 {
@@ -702,7 +859,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--main-color));
+    background: var(--main-color);
     z-index: -1;
     transition: .5s;
 }
@@ -763,7 +920,8 @@ section:nth-child(odd) .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
-.footer.show-animate .animate.scroll {
+.footer.show-animate .animate.scroll,
+.bilan.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
