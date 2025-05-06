@@ -26,6 +26,7 @@ window.onscroll = () => {
         else {
             sec.classList.remove('show-animate');
         }
+        
     });
 
     let header = document.querySelector('header');
@@ -59,3 +60,46 @@ function openTab(event, tabId) {
     event.currentTarget.classList.add('active');
     document.getElementById(tabId).classList.add('active');
 }
+
+function switchProjet(type) {
+    const blocUniv = document.getElementById("projets-univ");
+    const blocPro = document.getElementById("projets-pro");
+    const titre = document.querySelector("#projets h2"); 
+    const sousTitre = document.querySelector("#projets h3"); 
+
+    if (type === "univ") {
+        blocUniv.style.display = "block";
+        blocPro.style.display = "none";
+        titre.innerHTML = "Mes <span>Projets</span> au <span>sein</span> de <span>mon</span> BUT";
+        sousTitre.innerHTML = "*Situation d'Apprentissage et d'Évaluation";
+    } else if (type === "pro") {
+        blocUniv.style.display = "none";
+        blocPro.style.display = "block";
+        titre.innerHTML = "Mes <span>Projets</span> Professionnels <span class='animate scroll' style='--i:1;'></span>";
+        sousTitre.innerHTML = "";
+    }
+
+    const sectionProjet = document.getElementById("projets");
+    if (sectionProjet) sectionProjet.scrollIntoView({ behavior: "smooth" });
+}
+
+/* en cours */ 
+
+/* function sendEmail() {
+    const form = document.getElementById("contact-form");
+    const formData = new FormData(form);
+
+    emailjs.send("service_bhpr5dm", "YOUR_TEMPLATE_ID", {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+    }).then(
+        function(response) {
+            alert("E-mail envoyé avec succès !");
+        },
+        function(error) {
+            alert("Erreur lors de l'envoi de l'e-mail : " + error.text);
+        }
+    );
+} */
